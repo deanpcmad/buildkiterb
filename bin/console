@@ -13,7 +13,7 @@ require 'dotenv/load'
 # require "pry"
 # Pry.start
 
-@client = Buildkite::Client.new(access_token: ENV["ACCESS_TOKEN"])
+@client = Buildkite::Client.new(token: ENV["API_TOKEN"])
 
 require "irb"
 IRB.start(__FILE__)

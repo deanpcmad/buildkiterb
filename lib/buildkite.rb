@@ -12,7 +12,9 @@ module Buildkite
   
 
   autoload :OrganizationsResource, "buildkite/resources/organizations"
+  autoload :AccessTokenResource, "buildkite/resources/access_token"
 
   autoload :Organization, "buildkite/objects/organization"
+  autoload :AccessToken, "buildkite/objects/access_token"
 
 end

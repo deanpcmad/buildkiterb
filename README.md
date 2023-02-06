@@ -18,7 +18,17 @@ Firstly you'll need to create an API Token on [Buildkite](https://buildkite.com/
 and then set it like so: 
 
 ```ruby
-@client = Buildkite::Client.new(access_token: "")
+@client = Buildkite::Client.new(token: "abc123")
+```
+
+### Access Token
+
+```ruby
+# Get details of the current token
+@client.access_token.get
+
+# Revoke the current token
+@client.access_token.revoke
 ```
 
 ### Organizations
