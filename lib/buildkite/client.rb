@@ -24,6 +24,10 @@ module Buildkite
       PipelinesResource.new(self)
     end
 
+    def builds
+      BuildsResource.new(self)
+    end
+
     def connection
       @connection ||= Faraday.new(BASE_URL) do |conn|
         conn.request :authorization, :Bearer, token

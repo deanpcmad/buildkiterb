@@ -74,6 +74,33 @@ and then set it like so:
 @client.pipelines.webhook org: "org-slug", slug: "my-pipeline"
 ```
 
+### Builds
+
+```ruby
+# List all builds
+@client.builds.list
+
+# List all builds for an org
+@client.builds.list org: "org-slug"
+
+# List all builds for a pipeline
+@client.builds.list org: "org-slug", pipeline: "pipeline-slug"
+
+# Get a build
+# The Build Number is used, not the ID
+@client.builds.get org: "org-slug", pipeline: "pipeline-slug", number: 123
+
+# Create a Build
+# Docs: https://buildkite.com/docs/apis/rest-api/builds#create-a-build
+@client.builds.create org: "org-slug", pipeline: "pipeline-slug", commit: "abc123", branch: "master"
+
+# Cancel a build
+@client.builds.cancel org: "org-slug", pipeline: "pipeline-slug", number: 123
+
+# Rebuild a build
+@client.builds.rebuild org: "org-slug", pipeline: "pipeline-slug", number: 123
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/deanpcmad/buildkiterb.
