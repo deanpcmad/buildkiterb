@@ -28,6 +28,10 @@ module Buildkite
       BuildsResource.new(self)
     end
 
+    def jobs
+      JobsResource.new(self)
+    end
+
     def agents
       AgentsResource.new(self)
     end

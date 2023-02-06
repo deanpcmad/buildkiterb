@@ -115,6 +115,26 @@ and then set it like so:
 @client.agents.get org: "org-slug", id: "abc123"
 ```
 
+### Jobs
+
+```ruby
+# Retry a job
+@client.jobs.retry org: "org-slug", pipeline: "pipeline-slug", number: 123, job: "abc123"
+
+# Unblock a job
+# Docs: https://buildkite.com/docs/apis/rest-api/jobs#unblock-a-job
+@client.jobs.unblock org: "org-slug", pipeline: "pipeline-slug", number: 123, job: "abc123", {}
+
+# Get a job's logs
+@client.jobs.log org: "org-slug", pipeline: "pipeline-slug", number: 123, job: "abc123"
+
+# Delete a job's log
+@client.jobs.delete_log org: "org-slug", pipeline: "pipeline-slug", number: 123, job: "abc123"
+
+# Get a job's environment variables
+@client.jobs.env org: "org-slug", pipeline: "pipeline-slug", number: 123, job: "abc123"
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/deanpcmad/buildkiterb.
