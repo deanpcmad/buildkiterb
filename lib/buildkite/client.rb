@@ -12,12 +12,16 @@ module Buildkite
       @stubs = stubs
     end
 
+    def access_token
+      AccessTokenResource.new(self)
+    end
+
     def organizations
       OrganizationsResource.new(self)
     end
 
-    def access_token
-      AccessTokenResource.new(self)
+    def pipelines
+      PipelinesResource.new(self)
     end
 
     def connection

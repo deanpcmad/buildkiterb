@@ -41,6 +41,39 @@ and then set it like so:
 @client.organizations.get slug: "my-org-slug"
 ```
 
+### Pipelines
+
+```ruby
+# List all pipelines for an org
+@client.pipelines.list org: "org-slug"
+#=> #<Buildkite::Collection...
+
+# Get a pipeline
+@client.pipelines.get org: "org-slug", slug: "pipeline-slug"
+
+# Create a Pipeline. View the 2 docs links for the correct params
+# Docs: https://buildkite.com/docs/apis/rest-api/pipelines#create-a-yaml-pipeline
+# Docs: https://buildkite.com/docs/apis/rest-api/pipelines#create-a-visual-step-pipeline
+@client.pipelines.create org: "org-slug", name: "my pipeline", repository: "git@github.com:user/repo.git", configuration: {}
+
+# Update a pipeline
+# Docs: https://buildkite.com/docs/apis/rest-api/pipelines#update-a-pipeline
+@client.pipelines.update org: "org-slug", slug: "my-pipeline", {}
+
+# Archive a pipeline
+@client.pipelines.archive org: "org-slug", slug: "my-pipeline"
+
+# Unarchive a pipeline
+@client.pipelines.unarchive org: "org-slug", slug: "my-pipeline"
+
+# Delete a pipeline
+@client.pipelines.delete org: "org-slug", slug: "my-pipeline"
+
+# Setup automatic webhooks
+# Returns 422 if not supported or cannot be done
+@client.pipelines.webhook org: "org-slug", slug: "my-pipeline"
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/deanpcmad/buildkiterb.

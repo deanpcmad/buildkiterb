@@ -10,11 +10,12 @@ module Buildkite
   autoload :Resource, "buildkite/resource"
   autoload :Object, "buildkite/object"
   
-
-  autoload :OrganizationsResource, "buildkite/resources/organizations"
   autoload :AccessTokenResource, "buildkite/resources/access_token"
+  autoload :OrganizationsResource, "buildkite/resources/organizations"
+  autoload :PipelinesResource, "buildkite/resources/pipelines"
 
-  autoload :Organization, "buildkite/objects/organization"
   autoload :AccessToken, "buildkite/objects/access_token"
+  autoload :Organization, "buildkite/objects/organization"
+  autoload :Pipeline, "buildkite/objects/pipeline"
 
 end
