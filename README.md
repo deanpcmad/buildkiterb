@@ -101,6 +101,20 @@ and then set it like so:
 @client.builds.rebuild org: "org-slug", pipeline: "pipeline-slug", number: 123
 ```
 
+### Agents
+
+```ruby
+# List all agents for an org
+@client.agents.list org: "org-slug"
+
+# Get an agent
+@client.agents.get org: "org-slug", id: "abc123"
+
+# Stop an agent
+# To force an agent to stop, add `force: true`
+@client.agents.get org: "org-slug", id: "abc123"
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/deanpcmad/buildkiterb.

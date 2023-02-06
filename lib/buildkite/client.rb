@@ -28,6 +28,10 @@ module Buildkite
       BuildsResource.new(self)
     end
 
+    def agents
+      AgentsResource.new(self)
+    end
+
     def connection
       @connection ||= Faraday.new(BASE_URL) do |conn|
         conn.request :authorization, :Bearer, token
