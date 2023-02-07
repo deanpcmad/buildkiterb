@@ -168,6 +168,12 @@ and then set it like so:
 @client.emojis.list org: "org-slug"
 ```
 
+### User
+
+```ruby
+# Get the current user
+@client.user.get
+```
 
 ## Contributing
 
