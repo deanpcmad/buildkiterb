@@ -18,6 +18,7 @@ module Buildkite
   autoload :AgentsResource, "buildkite/resources/agents"
   autoload :AnnotationsResource, "buildkite/resources/annotations"
   autoload :ArtifactsResource, "buildkite/resources/artifacts"
+  autoload :EmojisResource, "buildkite/resources/emojis"
 
   autoload :AccessToken, "buildkite/objects/access_token"
   autoload :Organization, "buildkite/objects/organization"
@@ -30,5 +31,6 @@ module Buildkite
   autoload :Annotation, "buildkite/objects/annotation"
   autoload :Artifact, "buildkite/objects/artifact"
   autoload :ArtifactDownload, "buildkite/objects/artifact_download"
+  autoload :Emoji, "buildkite/objects/emoji"
 
 end

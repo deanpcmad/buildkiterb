@@ -161,6 +161,14 @@ and then set it like so:
 @client.artifacts.delete org: "org-slug", pipeline: "pipeline-slug", number: 123, job: "abc123", id: "123abc"
 ```
 
+### Emojis
+
+```ruby
+# List emojis for an organization
+@client.emojis.list org: "org-slug"
+```
+
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/deanpcmad/buildkiterb.

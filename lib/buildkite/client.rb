@@ -44,6 +44,10 @@ module Buildkite
       AnnotationsResource.new(self)
     end
 
+    def emojis
+      EmojisResource.new(self)
+    end
+
     def connection
       @connection ||= Faraday.new(BASE_URL) do |conn|
         conn.request :authorization, :Bearer, token
