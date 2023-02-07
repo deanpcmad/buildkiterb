@@ -135,6 +135,14 @@ and then set it like so:
 @client.jobs.env org: "org-slug", pipeline: "pipeline-slug", number: 123, job: "abc123"
 ```
 
+### Annotations
+
+```ruby
+# List annotations for a build
+@client.annotations.list org: "org-slug", pipeline: "pipeline-slug", number: 123
+```
+
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/deanpcmad/buildkiterb.

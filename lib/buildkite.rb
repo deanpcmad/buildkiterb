@@ -16,6 +16,7 @@ module Buildkite
   autoload :BuildsResource, "buildkite/resources/builds"
   autoload :JobsResource, "buildkite/resources/jobs"
   autoload :AgentsResource, "buildkite/resources/agents"
+  autoload :AnnotationsResource, "buildkite/resources/annotations"
 
   autoload :AccessToken, "buildkite/objects/access_token"
   autoload :Organization, "buildkite/objects/organization"
@@ -25,5 +26,6 @@ module Buildkite
   autoload :JobLog, "buildkite/objects/job_log"
   autoload :JobEnv, "buildkite/objects/job_env"
   autoload :Agent, "buildkite/objects/agent"
+  autoload :Annotation, "buildkite/objects/annotation"
 
 end
