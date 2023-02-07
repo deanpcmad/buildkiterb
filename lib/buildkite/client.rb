@@ -36,6 +36,10 @@ module Buildkite
       AgentsResource.new(self)
     end
 
+    def artifacts
+      ArtifactsResource.new(self)
+    end
+
     def annotations
       AnnotationsResource.new(self)
     end

@@ -142,6 +142,24 @@ and then set it like so:
 @client.annotations.list org: "org-slug", pipeline: "pipeline-slug", number: 123
 ```
 
+### Artifacts
+
+```ruby
+# List artifacts for a build
+@client.artifacts.list org: "org-slug", pipeline: "pipeline-slug", number: 123
+
+# List artifacts for a build job
+@client.artifacts.list org: "org-slug", pipeline: "pipeline-slug", number: 123, job: "abc123"
+
+# Get an artifact
+@client.artifacts.get org: "org-slug", pipeline: "pipeline-slug", number: 123, job: "abc123", id: "123abc"
+
+# Download an artifact
+@client.artifacts.download org: "org-slug", pipeline: "pipeline-slug", number: 123, job: "abc123", id: "123abc"
+
+# Delete an artifact
+@client.artifacts.delete org: "org-slug", pipeline: "pipeline-slug", number: 123, job: "abc123", id: "123abc"
+```
 
 ## Contributing
 
