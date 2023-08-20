@@ -31,6 +31,7 @@ module Buildkite
   autoload :JobEnv, "buildkite/models/job_env"
   autoload :Agent, "buildkite/models/agent"
   autoload :Cluster, "buildkite/models/cluster"
+  autoload :ClusterQueue, "buildkite/models/cluster_queue"
   autoload :Annotation, "buildkite/models/annotation"
   autoload :Artifact, "buildkite/models/artifact"
   autoload :ArtifactDownload, "buildkite/models/artifact_download"
