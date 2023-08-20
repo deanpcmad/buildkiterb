@@ -1,14 +1,14 @@
 PATH
   remote: .
   specs:
-    buildkiterb (0.2.0)
+    buildkiterb (1.0.0)
       faraday (~> 2.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
     dotenv (2.7.6)
-    faraday (2.7.4)
+    faraday (2.7.10)
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
