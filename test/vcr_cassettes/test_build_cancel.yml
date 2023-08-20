@@ -1,0 +1,111 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/5/cancel
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - buildkiterb/v0.2.0 (github.com/deanpcmad/buildkiterb)
+      Authorization:
+      - Bearer <AUTHORIZATION>
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 20 Aug 2023 19:44:27 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - nginx
+      x-frame-options:
+      - SAMEORIGIN, SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff, nosniff
+      x-download-options:
+      - noopen
+      x-permitted-cross-domain-policies:
+      - none
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - Link, Rate-Limit-Remaining, Rate-Limit-Limit, Rate-Limit-Reset, RateLimit-Remaining,
+        RateLimit-Limit, RateLimit-Reset, X-OAuth-Scopes
+      rate-limit-remaining:
+      - '98'
+      rate-limit-limit:
+      - '100'
+      rate-limit-reset:
+      - '33'
+      ratelimit-remaining:
+      - '98'
+      ratelimit-limit:
+      - '100'
+      ratelimit-reset:
+      - '33'
+      x-accepted-oauth-scopes:
+      - write_builds
+      vary:
+      - Accept
+      x-oauth-scopes:
+      - read_agents,write_agents,read_clusters,write_clusters,read_teams,read_artifacts,write_artifacts,read_builds,write_builds,read_job_env,read_build_logs,write_build_logs,read_organizations,read_pipelines,write_pipelines,read_user,read_suites,write_suites
+      etag:
+      - W/"14d67104850766ad2a4749a1156e0752"
+      cache-control:
+      - max-age=0, private, must-revalidate
+      content-security-policy-report-only:
+      - 'object-src ''none''; script-src ''unsafe-inline'' ''strict-dynamic'' ''report-sample''
+        https: http: ''nonce-CHrjFdCnNVFZh3J+yMfing==''; report-uri /_csp-violation-reports'
+      x-request-id:
+      - 11959c44-4690-4166-8e69-57523c1df471
+      x-runtime:
+      - '0.169745'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload, max-age=31536000; includeSubDomains;
+        preload
+      x-ua-compatible:
+      - chrome=1
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"id":"018a147a-1554-4af6-8df1-2555616644d1","graphql_id":"QnVpbGQtLS0wMThhMTQ3YS0xNTU0LTRhZjYtOGRmMS0yNTU1NjE2NjQ0ZDE=","url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/5","web_url":"https://buildkite.com/dean-test/starter-buildkite-pipeline/builds/5","number":5,"state":"canceling","blocked":false,"blocked_state":"","message":"Merge
+        pull request #2 from buildkite/add-next-steps-annotation\n\nAdd a next step
+        in an annotation","commit":"bf46f7db3aa051ea3cab5ec8ad293c86d56cddeb","branch":"main","tag":null,"env":{},"source":"ui","author":null,"creator":{"id":"984e6bf7-2523-4bf1-930b-58981572d65c","graphql_id":"VXNlci0tLTk4NGU2YmY3LTI1MjMtNGJmMS05MzBiLTU4OTgxNTcyZDY1Yw==","name":"Dean","email":"dean@deanpcmad.com","avatar_url":"https://www.gravatar.com/avatar/dd4d495ca7501f88b68a3702c0587e41","created_at":"2014-09-22T10:13:21.477Z"},"created_at":"2023-08-20T19:44:19.805Z","scheduled_at":"2023-08-20T19:44:19.779Z","started_at":"2023-08-20T19:44:21.417Z","finished_at":null,"meta_data":{"buildkite:git:commit":"commit
+        bf46f7db3aa051ea3cab5ec8ad293c86d56cddeb\nabbrev-commit bf46f7d\nAuthor: Chris
+        Campbell <chris.c@buildkite.com>\n\n    Merge pull request #2 from buildkite/add-next-steps-annotation\n    \n    Add
+        a next step in an annotation"},"pull_request":null,"rebuilt_from":null,"pipeline":{"id":"018a1474-14e6-4a7c-a499-dbfed5214602","graphql_id":"UGlwZWxpbmUtLS0wMThhMTQ3NC0xNGU2LTRhN2MtYTQ5OS1kYmZlZDUyMTQ2MDI=","url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline","web_url":"https://buildkite.com/dean-test/starter-buildkite-pipeline","name":"Starter
+        Buildkite Pipeline","description":"This is a starter pipeline","slug":"starter-buildkite-pipeline","repository":"https://github.com/deanpcmad/starter.git","cluster_id":null,"pipeline_template_uuid":null,"branch_configuration":null,"default_branch":"main","skip_queued_branch_builds":false,"skip_queued_branch_builds_filter":null,"cancel_running_branch_builds":false,"cancel_running_branch_builds_filter":null,"allow_rebuilds":true,"provider":{"id":"github","settings":{"build_branches":true,"build_merge_group_checks_requested":false,"build_pull_request_base_branch_changed":false,"build_pull_request_forks":false,"build_pull_request_labels_changed":false,"build_pull_request_ready_for_review":false,"build_pull_requests":true,"build_tags":false,"cancel_deleted_branch_builds":false,"filter_enabled":false,"prefix_pull_request_fork_branch_names":true,"publish_blocked_as_pending":false,"publish_commit_status_per_step":false,"publish_commit_status":true,"pull_request_branch_filter_enabled":false,"separate_pull_request_statuses":false,"skip_builds_for_existing_commits":false,"skip_pull_request_builds_for_existing_commits":true,"trigger_mode":"code","use_step_key_as_commit_status":false,"repository":"deanpcmad/starter"},"webhook_url":"https://webhook.buildkite.com/deliver/7a92f73d8c00692afbf3591d81eda6c0724c557af803c57fa3"},"builds_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds","badge_url":"https://badge.buildkite.com/0f6b6e44280b808f6dd6bfc8db625f2d1b450ae12c2628d029.svg","created_by":{"id":"984e6bf7-2523-4bf1-930b-58981572d65c","graphql_id":"VXNlci0tLTk4NGU2YmY3LTI1MjMtNGJmMS05MzBiLTU4OTgxNTcyZDY1Yw==","name":"Dean","email":"dean@deanpcmad.com","avatar_url":"https://www.gravatar.com/avatar/dd4d495ca7501f88b68a3702c0587e41","created_at":"2014-09-22T10:13:21.477Z"},"created_at":"2023-08-20T19:37:46.469Z","archived_at":null,"env":{},"scheduled_builds_count":0,"running_builds_count":1,"scheduled_jobs_count":0,"running_jobs_count":1,"waiting_jobs_count":0,"visibility":"private","tags":null,"emoji":null,"color":null,"steps":[{"type":"script","name":":pipeline:","command":"buildkite-agent
+        pipeline upload","artifact_paths":"","branch_configuration":"","env":{},"timeout_in_minutes":null,"agent_query_rules":[],"concurrency":null,"parallelism":null}]},"jobs":[{"id":"018a147a-155c-40ba-b1e1-3c875bdfb04d","graphql_id":"Sm9iLS0tMDE4YTE0N2EtMTU1Yy00MGJhLWIxZTEtM2M4NzViZGZiMDRk","type":"script","name":":pipeline:","step_key":null,"priority":{"number":0},"agent_query_rules":[],"state":"passed","build_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/5","web_url":"https://buildkite.com/dean-test/starter-buildkite-pipeline/builds/5#018a147a-155c-40ba-b1e1-3c875bdfb04d","log_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/5/jobs/018a147a-155c-40ba-b1e1-3c875bdfb04d/log","raw_log_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/5/jobs/018a147a-155c-40ba-b1e1-3c875bdfb04d/log.txt","artifacts_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/5/jobs/018a147a-155c-40ba-b1e1-3c875bdfb04d/artifacts","command":"buildkite-agent
+        pipeline upload","soft_failed":false,"exit_status":0,"artifact_paths":"","created_at":"2023-08-20T19:44:19.791Z","scheduled_at":"2023-08-20T19:44:19.791Z","runnable_at":"2023-08-20T19:44:19.842Z","started_at":"2023-08-20T19:44:21.417Z","finished_at":"2023-08-20T19:44:23.937Z","expired_at":null,"retried":false,"retried_in_job_id":null,"retries_count":null,"retry_source":null,"retry_type":null,"parallel_group_index":null,"parallel_group_total":null,"matrix":null,"agent":{"id":"018a1458-09d5-49bc-b52c-f951691cda4e","url":"https://api.buildkite.com/v2/organizations/dean-test/agents/018a1458-09d5-49bc-b52c-f951691cda4e","web_url":"https://buildkite.com/organizations/dean-test/agents/018a1458-09d5-49bc-b52c-f951691cda4e","name":"cfb62e5d9cea-1","connection_state":"connected","ip_address":"<IP_ADDRESS>","hostname":"cfb62e5d9cea","user_agent":"buildkite-agent/3.52.0.6806
+        (linux; amd64)","version":"3.52.0","creator":null,"created_at":"2023-08-20T19:07:08.629Z","job":null,"last_job_finished_at":"2023-08-20T19:44:26.899Z","priority":0,"meta_data":["queue=default"]}},{"id":"018a147a-206f-4196-8b56-622ab5d06190","graphql_id":"Sm9iLS0tMDE4YTE0N2EtMjA2Zi00MTk2LThiNTYtNjIyYWI1ZDA2MTkw","type":"script","name":":construction_worker:
+        Build","step_key":"build","priority":{"number":0},"agent_query_rules":[],"state":"passed","build_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/5","web_url":"https://buildkite.com/dean-test/starter-buildkite-pipeline/builds/5#018a147a-206f-4196-8b56-622ab5d06190","log_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/5/jobs/018a147a-206f-4196-8b56-622ab5d06190/log","raw_log_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/5/jobs/018a147a-206f-4196-8b56-622ab5d06190/log.txt","artifacts_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/5/jobs/018a147a-206f-4196-8b56-622ab5d06190/artifacts","command":"echo
+        \"Build the rocket\"","soft_failed":false,"exit_status":0,"artifact_paths":null,"created_at":"2023-08-20T19:44:22.623Z","scheduled_at":"2023-08-20T19:44:19.791Z","runnable_at":"2023-08-20T19:44:23.994Z","started_at":"2023-08-20T19:44:24.536Z","finished_at":"2023-08-20T19:44:25.415Z","expired_at":null,"retried":false,"retried_in_job_id":null,"retries_count":null,"retry_source":null,"retry_type":null,"parallel_group_index":null,"parallel_group_total":null,"matrix":null,"agent":{"id":"018a1458-09d5-49bc-b52c-f951691cda4e","url":"https://api.buildkite.com/v2/organizations/dean-test/agents/018a1458-09d5-49bc-b52c-f951691cda4e","web_url":"https://buildkite.com/organizations/dean-test/agents/018a1458-09d5-49bc-b52c-f951691cda4e","name":"cfb62e5d9cea-1","connection_state":"connected","ip_address":"<IP_ADDRESS>","hostname":"cfb62e5d9cea","user_agent":"buildkite-agent/3.52.0.6806
+        (linux; amd64)","version":"3.52.0","creator":null,"created_at":"2023-08-20T19:07:08.629Z","job":null,"last_job_finished_at":"2023-08-20T19:44:26.899Z","priority":0,"meta_data":["queue=default"]}},{"id":"018a147a-2073-4495-bfc9-41194c2f07e7","graphql_id":"Sm9iLS0tMDE4YTE0N2EtMjA3My00NDk1LWJmYzktNDExOTRjMmYwN2U3","type":"script","name":":white_check_mark:
+        Test","step_key":"test","priority":{"number":0},"agent_query_rules":[],"state":"passed","build_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/5","web_url":"https://buildkite.com/dean-test/starter-buildkite-pipeline/builds/5#018a147a-2073-4495-bfc9-41194c2f07e7","log_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/5/jobs/018a147a-2073-4495-bfc9-41194c2f07e7/log","raw_log_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/5/jobs/018a147a-2073-4495-bfc9-41194c2f07e7/log.txt","artifacts_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/5/jobs/018a147a-2073-4495-bfc9-41194c2f07e7/artifacts","command":"echo
+        \"Test the rocket\"","soft_failed":false,"exit_status":0,"artifact_paths":null,"created_at":"2023-08-20T19:44:22.623Z","scheduled_at":"2023-08-20T19:44:19.791Z","runnable_at":"2023-08-20T19:44:25.466Z","started_at":"2023-08-20T19:44:26.034Z","finished_at":"2023-08-20T19:44:26.893Z","expired_at":null,"retried":false,"retried_in_job_id":null,"retries_count":null,"retry_source":null,"retry_type":null,"parallel_group_index":null,"parallel_group_total":null,"matrix":null,"agent":{"id":"018a1458-09d5-49bc-b52c-f951691cda4e","url":"https://api.buildkite.com/v2/organizations/dean-test/agents/018a1458-09d5-49bc-b52c-f951691cda4e","web_url":"https://buildkite.com/organizations/dean-test/agents/018a1458-09d5-49bc-b52c-f951691cda4e","name":"cfb62e5d9cea-1","connection_state":"connected","ip_address":"<IP_ADDRESS>","hostname":"cfb62e5d9cea","user_agent":"buildkite-agent/3.52.0.6806
+        (linux; amd64)","version":"3.52.0","creator":null,"created_at":"2023-08-20T19:07:08.629Z","job":null,"last_job_finished_at":"2023-08-20T19:44:26.899Z","priority":0,"meta_data":["queue=default"]}},{"id":"018a147a-2076-4488-a7e4-cf9d86d1ccb5","graphql_id":"Sm9iLS0tMDE4YTE0N2EtMjA3Ni00NDg4LWE3ZTQtY2Y5ZDg2ZDFjY2I1","type":"script","name":":rocket:
+        Deploy","step_key":"deploy","priority":{"number":0},"agent_query_rules":[],"state":"canceling","build_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/5","web_url":"https://buildkite.com/dean-test/starter-buildkite-pipeline/builds/5#018a147a-2076-4488-a7e4-cf9d86d1ccb5","log_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/5/jobs/018a147a-2076-4488-a7e4-cf9d86d1ccb5/log","raw_log_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/5/jobs/018a147a-2076-4488-a7e4-cf9d86d1ccb5/log.txt","artifacts_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/5/jobs/018a147a-2076-4488-a7e4-cf9d86d1ccb5/artifacts","command":"echo
+        \"Launch the rocket\"\ncat .buildkite/annotation.md | buildkite-agent annotate
+        --style \"success\"\n","soft_failed":false,"exit_status":null,"artifact_paths":null,"created_at":"2023-08-20T19:44:22.623Z","scheduled_at":"2023-08-20T19:44:19.791Z","runnable_at":"2023-08-20T19:44:26.949Z","started_at":"2023-08-20T19:44:27.555Z","finished_at":null,"expired_at":null,"retried":false,"retried_in_job_id":null,"retries_count":null,"retry_source":null,"retry_type":null,"parallel_group_index":null,"parallel_group_total":null,"matrix":null,"agent":{"id":"018a1458-09d5-49bc-b52c-f951691cda4e","url":"https://api.buildkite.com/v2/organizations/dean-test/agents/018a1458-09d5-49bc-b52c-f951691cda4e","web_url":"https://buildkite.com/organizations/dean-test/agents/018a1458-09d5-49bc-b52c-f951691cda4e","name":"cfb62e5d9cea-1","connection_state":"connected","ip_address":"<IP_ADDRESS>","hostname":"cfb62e5d9cea","user_agent":"buildkite-agent/3.52.0.6806
+        (linux; amd64)","version":"3.52.0","creator":null,"created_at":"2023-08-20T19:07:08.629Z","job":null,"last_job_finished_at":"2023-08-20T19:44:26.899Z","priority":0,"meta_data":["queue=default"]}}]}
+
+        '
+  recorded_at: Sun, 20 Aug 2023 19:44:27 GMT
+recorded_with: VCR 6.2.0
