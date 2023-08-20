@@ -1,0 +1,95 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/unarchive
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - buildkiterb/v0.2.0 (github.com/deanpcmad/buildkiterb)
+      Authorization:
+      - Bearer <AUTHORIZATION>
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 20 Aug 2023 19:26:11 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - nginx
+      x-frame-options:
+      - SAMEORIGIN, SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff, nosniff
+      x-download-options:
+      - noopen
+      x-permitted-cross-domain-policies:
+      - none
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - Link, Rate-Limit-Remaining, Rate-Limit-Limit, Rate-Limit-Reset, RateLimit-Remaining,
+        RateLimit-Limit, RateLimit-Reset, X-OAuth-Scopes
+      rate-limit-remaining:
+      - '99'
+      rate-limit-limit:
+      - '100'
+      rate-limit-reset:
+      - '49'
+      ratelimit-remaining:
+      - '99'
+      ratelimit-limit:
+      - '100'
+      ratelimit-reset:
+      - '49'
+      x-accepted-oauth-scopes:
+      - write_pipelines
+      vary:
+      - Accept
+      x-oauth-scopes:
+      - read_agents,write_agents,read_clusters,write_clusters,read_teams,read_artifacts,write_artifacts,read_builds,write_builds,read_job_env,read_build_logs,write_build_logs,read_organizations,read_pipelines,write_pipelines,read_user,read_suites,write_suites
+      etag:
+      - W/"8caf4d3ce61354f19c662e9142a528d8"
+      cache-control:
+      - max-age=0, private, must-revalidate
+      content-security-policy-report-only:
+      - 'object-src ''none''; script-src ''unsafe-inline'' ''strict-dynamic'' ''report-sample''
+        https: http: ''nonce-KI8TrSBvO9e84xjjwgJkBA==''; report-uri /_csp-violation-reports'
+      x-request-id:
+      - d0b3f89d-0b32-4901-b07b-5ebc3c845b13
+      x-runtime:
+      - '0.137107'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload, max-age=31536000; includeSubDomains;
+        preload
+      x-ua-compatible:
+      - chrome=1
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"id":"018a1465-f6ff-44ae-b21d-a57b6f0a3644","graphql_id":"UGlwZWxpbmUtLS0wMThhMTQ2NS1mNmZmLTQ0YWUtYjIxZC1hNTdiNmYwYTM2NDQ=","url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline","web_url":"https://buildkite.com/dean-test/starter-buildkite-pipeline","name":"Starter
+        Buildkite Pipeline","description":"Updated description","slug":"starter-buildkite-pipeline","repository":"https://github.com/deanpcmad/starter.git","cluster_id":null,"pipeline_template_uuid":null,"branch_configuration":null,"default_branch":"main","skip_queued_branch_builds":false,"skip_queued_branch_builds_filter":null,"cancel_running_branch_builds":false,"cancel_running_branch_builds_filter":null,"allow_rebuilds":true,"provider":{"id":"github","settings":{"build_branches":true,"build_merge_group_checks_requested":false,"build_pull_request_base_branch_changed":false,"build_pull_request_forks":false,"build_pull_request_labels_changed":false,"build_pull_request_ready_for_review":false,"build_pull_requests":true,"build_tags":false,"cancel_deleted_branch_builds":false,"filter_enabled":false,"prefix_pull_request_fork_branch_names":true,"publish_blocked_as_pending":false,"publish_commit_status_per_step":false,"publish_commit_status":true,"pull_request_branch_filter_enabled":false,"separate_pull_request_statuses":false,"skip_builds_for_existing_commits":false,"skip_pull_request_builds_for_existing_commits":true,"trigger_mode":"code","use_step_key_as_commit_status":false,"repository":"deanpcmad/starter"},"webhook_url":"https://webhook.buildkite.com/deliver/1bc0e6c7d278bb5a3e139df1864ccd3174349239b22ad7eb35"},"builds_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds","badge_url":"https://badge.buildkite.com/185c75dd7ded44381554e23b53560cf0b78f89942e9d2573b0.svg","created_by":{"id":"984e6bf7-2523-4bf1-930b-58981572d65c","graphql_id":"VXNlci0tLTk4NGU2YmY3LTI1MjMtNGJmMS05MzBiLTU4OTgxNTcyZDY1Yw==","name":"Dean","email":"dean@deanpcmad.com","avatar_url":"https://www.gravatar.com/avatar/dd4d495ca7501f88b68a3702c0587e41","created_at":"2014-09-22T10:13:21.477Z"},"created_at":"2023-08-20T19:22:21.357Z","archived_at":null,"env":null,"scheduled_builds_count":0,"running_builds_count":0,"scheduled_jobs_count":0,"running_jobs_count":0,"waiting_jobs_count":0,"visibility":"private","tags":null,"emoji":null,"color":null,"configuration":"steps:\n  -
+        label: \":pipeline:\"\n    command: \"buildkite-agent pipeline upload\"","steps":[{"type":"script","name":":pipeline:","command":"buildkite-agent
+        pipeline upload","artifact_paths":null,"branch_configuration":null,"env":{},"timeout_in_minutes":null,"agent_query_rules":[],"concurrency":null,"parallelism":null}]}
+
+        '
+  recorded_at: Sun, 20 Aug 2023 19:26:11 GMT
+recorded_with: VCR 6.2.0
