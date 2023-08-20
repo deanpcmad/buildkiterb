@@ -1,70 +1,65 @@
 module Buildkite
   class Client
+
     BASE_URL = "https://api.buildkite.com/v2"
 
-    attr_reader :token, :adapter
+    class << self
 
-    def initialize(token:, adapter: Faraday.default_adapter, stubs: nil)
-      @token = token
-      @adapter = adapter
+      def connection
+        @connection ||= Faraday.new(BASE_URL) do |conn|
+          conn.request :authorization, :Bearer, Buildkite.config.token
 
-      # Test stubs for requests
-      @stubs = stubs
-    end
+          conn.headers = {
+            "User-Agent" => "buildkiterb/v#{VERSION} (github.com/deanpcmad/buildkiterb)"
+          }
 
-    def access_token
-      AccessTokenResource.new(self)
-    end
+          conn.request :json
 
-    def organizations
-      OrganizationsResource.new(self)
-    end
+          conn.response :json, content_type: "application/json"
+        end
+      end
 
-    def pipelines
-      PipelinesResource.new(self)
-    end
+      def get_request(url, params: {}, headers: {})
+        handle_response connection.get(url, params, headers)
+      end
 
-    def builds
-      BuildsResource.new(self)
-    end
+      def post_request(url, body: {}, headers: {})
+        handle_response connection.post(url, body, headers)
+      end
 
-    def jobs
-      JobsResource.new(self)
-    end
+      def patch_request(url, body:, headers: {})
+        handle_response connection.patch(url, body, headers)
+      end
 
-    def agents
-      AgentsResource.new(self)
-    end
+      def delete_request(url, headers: {})
+        handle_response connection.delete(url, headers)
+      end
 
-    def artifacts
-      ArtifactsResource.new(self)
-    end
+      def handle_response(response)
+        case response.status
+        when 400
+          raise Error, "Error 400: Your request was malformed. '#{response.body["message"]}'"
+        when 401
+          raise Error, "Error 401: You did not supply valid authentication credentials. '#{response.body["error"]}'"
+        when 403
+          raise Error, "Error 403: You are not allowed to perform that action. '#{response.body["message"]}'"
+        when 404
+          raise Error, "Error 404: No results were found for your request. '#{response.body["message"]}'"
+        when 409
+          raise Error, "Error 409: Your request was a conflict. '#{response.body["message"]}'"
+        when 429
+          raise Error, "Error 429: Your request exceeded the API rate limit. '#{response.body["message"]}'"
+        when 500
+          raise Error, "Error 500: We were unable to perform the request due to server-side problems. '#{response.body["message"]}'"
+        when 503
+          raise Error, "Error 503: You have been rate limited for sending more than 20 requests per second. '#{response.body["message"]}'"
+        when 501
+          raise Error, "Error 501: This resource has not been implemented. '#{response.body["message"]}'"
+        when 204
+          return true
+        end
 
-    def annotations
-      AnnotationsResource.new(self)
-    end
-
-    def emojis
-      EmojisResource.new(self)
-    end
-
-    def user
-      UserResource.new(self)
-    end
-
-    def connection
-      @connection ||= Faraday.new(BASE_URL) do |conn|
-        conn.request :authorization, :Bearer, token
-        
-        conn.headers = {
-          "User-Agent" => "buildkiterb/v#{VERSION} (github.com/deanpcmad/buildkiterb)"
-        }
-        
-        conn.request :json
-
-        conn.response :json, content_type: "application/json"
-
-        conn.adapter adapter, @stubs
+        response
       end
     end
 

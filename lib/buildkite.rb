@@ -1,38 +1,39 @@
 require "faraday"
-require "json"
-require "buildkite/version"
+
+require_relative "buildkite/version"
 
 module Buildkite
 
+  autoload :Configuration, "buildkite/configuration"
   autoload :Client, "buildkite/client"
   autoload :Collection, "buildkite/collection"
   autoload :Error, "buildkite/error"
-  autoload :Resource, "buildkite/resource"
   autoload :Object, "buildkite/object"
-  
-  autoload :AccessTokenResource, "buildkite/resources/access_token"
-  autoload :OrganizationsResource, "buildkite/resources/organizations"
-  autoload :PipelinesResource, "buildkite/resources/pipelines"
-  autoload :BuildsResource, "buildkite/resources/builds"
-  autoload :JobsResource, "buildkite/resources/jobs"
-  autoload :AgentsResource, "buildkite/resources/agents"
-  autoload :AnnotationsResource, "buildkite/resources/annotations"
-  autoload :ArtifactsResource, "buildkite/resources/artifacts"
-  autoload :EmojisResource, "buildkite/resources/emojis"
-  autoload :UserResource, "buildkite/resources/user"
 
-  autoload :AccessToken, "buildkite/objects/access_token"
-  autoload :Organization, "buildkite/objects/organization"
-  autoload :Pipeline, "buildkite/objects/pipeline"
-  autoload :Build, "buildkite/objects/build"
-  autoload :Job, "buildkite/objects/job"
-  autoload :JobLog, "buildkite/objects/job_log"
-  autoload :JobEnv, "buildkite/objects/job_env"
-  autoload :Agent, "buildkite/objects/agent"
-  autoload :Annotation, "buildkite/objects/annotation"
-  autoload :Artifact, "buildkite/objects/artifact"
-  autoload :ArtifactDownload, "buildkite/objects/artifact_download"
-  autoload :Emoji, "buildkite/objects/emoji"
-  autoload :User, "buildkite/objects/user"
+  class << self
+    attr_writer :config
+  end
+
+  def self.configure
+    yield(config) if block_given?
+  end
+
+  def self.config
+    @config ||= Buildkite::Configuration.new
+  end
+
+  autoload :AccessToken, "buildkite/models/access_token"
+  autoload :Organization, "buildkite/models/organization"
+  autoload :Pipeline, "buildkite/models/pipeline"
+  autoload :Build, "buildkite/models/build"
+  autoload :Job, "buildkite/models/job"
+  autoload :JobLog, "buildkite/models/job_log"
+  autoload :JobEnv, "buildkite/models/job_env"
+  autoload :Agent, "buildkite/models/agent"
+  autoload :Annotation, "buildkite/models/annotation"
+  autoload :Artifact, "buildkite/models/artifact"
+  autoload :ArtifactDownload, "buildkite/models/artifact_download"
+  autoload :Emoji, "buildkite/models/emoji"
+  autoload :User, "buildkite/models/user"
 
 end
