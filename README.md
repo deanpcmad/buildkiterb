@@ -146,7 +146,7 @@ Buildkite::Job.env pipeline: "pipeline-slug", number: 123, job: "abc123"
 
 ```ruby
 # List annotations for a build
-@client.annotations.list org: "org-slug", pipeline: "pipeline-slug", number: 123
+Buildkite::Annotation.list pipeline: "pipeline-slug", number: 123
 ```
 
 ### Artifacts
@@ -172,14 +172,14 @@ Buildkite::Artifact.delete pipeline: "pipeline-slug", number: 123, job: "abc123"
 
 ```ruby
 # List emojis for an organization
-@client.emojis.list org: "org-slug"
+Buildkite::Emoji.list
 ```
 
 ### User
 
 ```ruby
 # Get the current user
-@client.user.get
+Buildkite::User.retrieve
 ```
 
 ## Contributing

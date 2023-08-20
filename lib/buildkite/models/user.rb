@@ -1,8 +1,13 @@
 module Buildkite
-  class UserResource < Resource
-    
-    def get
-      User.new get_request("user").body
+  class User < Object
+
+    class << self
+
+      def retrieve
+        response = Client.get_request("user")
+        User.new response.body
+      end
+
     end
 
   end
