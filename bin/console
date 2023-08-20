@@ -14,7 +14,7 @@ require 'dotenv/load'
 # Pry.start
 
 Buildkite.configure do |config|
-  config.token = ENV["API_TOKEN"]
+  config.token = ENV["BUILDKITE_TOKEN"]
 end
 
 require "irb"
