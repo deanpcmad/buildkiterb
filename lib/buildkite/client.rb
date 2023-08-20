@@ -27,6 +27,10 @@ module Buildkite
         handle_response connection.post(url, body, headers)
       end
 
+      def put_request(url, body:, headers: {})
+        handle_response connection.put(url, body, headers)
+      end
+
       def patch_request(url, body:, headers: {})
         handle_response connection.patch(url, body, headers)
       end
