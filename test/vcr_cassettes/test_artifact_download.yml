@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/8/jobs/018a1486-a2d6-4d80-8204-b6cd3a1a18a5/artifacts/018a1486-bd2f-4e59-9211-2314043fca05/download
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - buildkiterb/v0.2.0 (github.com/deanpcmad/buildkiterb)
+      Authorization:
+      - Bearer <AUTHORIZATION>
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      date:
+      - Sun, 20 Aug 2023 20:03:16 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - nginx
+      x-frame-options:
+      - SAMEORIGIN, SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff, nosniff
+      x-download-options:
+      - noopen
+      x-permitted-cross-domain-policies:
+      - none
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - Link, Rate-Limit-Remaining, Rate-Limit-Limit, Rate-Limit-Reset, RateLimit-Remaining,
+        RateLimit-Limit, RateLimit-Reset, X-OAuth-Scopes
+      rate-limit-remaining:
+      - '99'
+      rate-limit-limit:
+      - '100'
+      rate-limit-reset:
+      - '44'
+      ratelimit-remaining:
+      - '99'
+      ratelimit-limit:
+      - '100'
+      ratelimit-reset:
+      - '44'
+      x-accepted-oauth-scopes:
+      - read_artifacts
+      location:
+      - https://s3.amazonaws.com/buildkiteartifacts.com/0187757d-a3c4-4466-8cdc-f83378a0a45f/018a1474-14e6-4a7c-a499-dbfed5214602/018a1486-68f3-4817-9c0d-cbfb07e0acb2/018a1486-a2d6-4d80-8204-b6cd3a1a18a5/README.md?response-content-type=text%2Fmarkdown&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAQPCP3C7LRWYDKCPE%2F20230820%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230820T200316Z&X-Amz-Expires=600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAoaCXVzLWVhc3QtMSJHMEUCIQDQsP%2F0J2jO514EJEPY6SarvtP1hU9EndN6DFNcqXSC%2FwIgUrczJdKJhBquRW4zcO6bPEIuk3X3a0XdvJL5xuoQ9zkq%2BgMIwv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwwMzIzNzk3MDUzMDMiDDxsekwhLqV34mj1ayrOA6gOrHS6VIM%2BASQCUMTV90MbG%2FEplmOugZwlGKqXkEkn%2FJp%2Fr28K%2BN4TuC3vZWS3%2Fl3DqYv17gCNoUXyhJvBOLXt%2FZ%2F%2BVflJWrbsNg788j44aqSP%2F4iRB6nzJ6ikJErjONetwSQKbb5FfOncGHdQu73ANmFYTnByWzNe9S40AOR01w3Ppvdy7bi23TEigdHOD4ykoSenK%2BlS15sNqqB%2BNHpaUy8qKyO10SQ3HZW%2BXmJnqp8tYnS4ANsf9I6DbPoHJTxTwE%2FUFVGRQB8giqBeLci5OOdYN9rrkRcMnvY4SP2whhi3lUfAyCiAvpVDcskC8f2dhu7ogg4nE6g139Kkfwdxd6hQGYYkWNHZBB159gKaCakMdjip%2BxIldRGyCfh%2Bpd2uIgamXZ%2BmD%2BM2JhDmLiweobMFBRWvGIySGG%2BJDBa86uZbdb5h8azO5YSoFlVYT90azwvmXricfyz9pjilEM22hHbtgSdOBliCYyeRIG8K4Voyz%2FkiaXpWtytlTRqxrzGxEUa8K6M8P7UHeR%2FyMYDORT3a%2Ba1mqCqXChQnXOP4fCRk1mQGNiFUdK6favjUmGBwY2p%2FwwW6YjmjsppaIWBiGFGHj0wJrNq4IdZgmzCDlYmnBjqlAZ5sKlsbTJ%2Fz%2BYfbzXgKoYUykkwArm2CHn1xM2hm73D500MRKISxUVzYotXyD8BLRgf%2Fgsz5mcVqCSaodDUeYJmM%2FlSReSG%2FWeF0yxOLGRqtxU25aG6xTZn2uyntc%2FZfVaejPh4JPcN6rDeYVmW0StFOlb57ptl%2Bugd2cZxv6%2FjI%2FV5a4pFhMhY3Kem6BFY6vScGVHdJJPwEYa9lhyEwSbaK%2FtIrOQ%3D%3D&X-Amz-SignedHeaders=host&X-Amz-Signature=fdd10db5c04591cb203e3e569e889ffa423eb0336f268a738980c159cc474869
+      vary:
+      - Accept
+      x-oauth-scopes:
+      - read_agents,write_agents,read_clusters,write_clusters,read_teams,read_artifacts,write_artifacts,read_builds,write_builds,read_job_env,read_build_logs,write_build_logs,read_organizations,read_pipelines,write_pipelines,read_user,read_suites,write_suites
+      cache-control:
+      - no-cache
+      content-security-policy-report-only:
+      - 'object-src ''none''; script-src ''unsafe-inline'' ''strict-dynamic'' ''report-sample''
+        https: http: ''nonce-jIQRZVFvu/IGs88q4OgKYA==''; report-uri /_csp-violation-reports'
+      x-request-id:
+      - 21944c6a-2fef-4e97-8ce5-398fadd052cd
+      x-runtime:
+      - '0.081987'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload, max-age=31536000; includeSubDomains;
+        preload
+      x-ua-compatible:
+      - chrome=1
+    body:
+      encoding: UTF-8
+      string: '{"url":"https://s3.amazonaws.com/buildkiteartifacts.com/0187757d-a3c4-4466-8cdc-f83378a0a45f/018a1474-14e6-4a7c-a499-dbfed5214602/018a1486-68f3-4817-9c0d-cbfb07e0acb2/018a1486-a2d6-4d80-8204-b6cd3a1a18a5/README.md?response-content-type=text%2Fmarkdown&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAQPCP3C7LRWYDKCPE%2F20230820%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230820T200316Z&X-Amz-Expires=600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAoaCXVzLWVhc3QtMSJHMEUCIQDQsP%2F0J2jO514EJEPY6SarvtP1hU9EndN6DFNcqXSC%2FwIgUrczJdKJhBquRW4zcO6bPEIuk3X3a0XdvJL5xuoQ9zkq%2BgMIwv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwwMzIzNzk3MDUzMDMiDDxsekwhLqV34mj1ayrOA6gOrHS6VIM%2BASQCUMTV90MbG%2FEplmOugZwlGKqXkEkn%2FJp%2Fr28K%2BN4TuC3vZWS3%2Fl3DqYv17gCNoUXyhJvBOLXt%2FZ%2F%2BVflJWrbsNg788j44aqSP%2F4iRB6nzJ6ikJErjONetwSQKbb5FfOncGHdQu73ANmFYTnByWzNe9S40AOR01w3Ppvdy7bi23TEigdHOD4ykoSenK%2BlS15sNqqB%2BNHpaUy8qKyO10SQ3HZW%2BXmJnqp8tYnS4ANsf9I6DbPoHJTxTwE%2FUFVGRQB8giqBeLci5OOdYN9rrkRcMnvY4SP2whhi3lUfAyCiAvpVDcskC8f2dhu7ogg4nE6g139Kkfwdxd6hQGYYkWNHZBB159gKaCakMdjip%2BxIldRGyCfh%2Bpd2uIgamXZ%2BmD%2BM2JhDmLiweobMFBRWvGIySGG%2BJDBa86uZbdb5h8azO5YSoFlVYT90azwvmXricfyz9pjilEM22hHbtgSdOBliCYyeRIG8K4Voyz%2FkiaXpWtytlTRqxrzGxEUa8K6M8P7UHeR%2FyMYDORT3a%2Ba1mqCqXChQnXOP4fCRk1mQGNiFUdK6favjUmGBwY2p%2FwwW6YjmjsppaIWBiGFGHj0wJrNq4IdZgmzCDlYmnBjqlAZ5sKlsbTJ%2Fz%2BYfbzXgKoYUykkwArm2CHn1xM2hm73D500MRKISxUVzYotXyD8BLRgf%2Fgsz5mcVqCSaodDUeYJmM%2FlSReSG%2FWeF0yxOLGRqtxU25aG6xTZn2uyntc%2FZfVaejPh4JPcN6rDeYVmW0StFOlb57ptl%2Bugd2cZxv6%2FjI%2FV5a4pFhMhY3Kem6BFY6vScGVHdJJPwEYa9lhyEwSbaK%2FtIrOQ%3D%3D&X-Amz-SignedHeaders=host&X-Amz-Signature=fdd10db5c04591cb203e3e569e889ffa423eb0336f268a738980c159cc474869"}
+
+        '
+  recorded_at: Sun, 20 Aug 2023 20:03:16 GMT
+recorded_with: VCR 6.2.0

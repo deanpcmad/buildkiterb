@@ -1,0 +1,90 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/8/jobs/018a1486-a2d6-4d80-8204-b6cd3a1a18a5/artifacts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - buildkiterb/v0.2.0 (github.com/deanpcmad/buildkiterb)
+      Authorization:
+      - Bearer <AUTHORIZATION>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 20 Aug 2023 20:01:13 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - nginx
+      x-frame-options:
+      - SAMEORIGIN, SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff, nosniff
+      x-download-options:
+      - noopen
+      x-permitted-cross-domain-policies:
+      - none
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - Link, Rate-Limit-Remaining, Rate-Limit-Limit, Rate-Limit-Reset, RateLimit-Remaining,
+        RateLimit-Limit, RateLimit-Reset, X-OAuth-Scopes
+      rate-limit-remaining:
+      - '99'
+      rate-limit-limit:
+      - '100'
+      rate-limit-reset:
+      - '47'
+      ratelimit-remaining:
+      - '99'
+      ratelimit-limit:
+      - '100'
+      ratelimit-reset:
+      - '47'
+      x-accepted-oauth-scopes:
+      - read_artifacts
+      vary:
+      - Accept
+      x-oauth-scopes:
+      - read_agents,write_agents,read_clusters,write_clusters,read_teams,read_artifacts,write_artifacts,read_builds,write_builds,read_job_env,read_build_logs,write_build_logs,read_organizations,read_pipelines,write_pipelines,read_user,read_suites,write_suites
+      etag:
+      - W/"d61320d94afce89761586559ec01dc0d"
+      cache-control:
+      - max-age=0, private, must-revalidate
+      content-security-policy-report-only:
+      - 'object-src ''none''; script-src ''unsafe-inline'' ''strict-dynamic'' ''report-sample''
+        https: http: ''nonce-CvhO0fU37gSUy/e2lsPm/g==''; report-uri /_csp-violation-reports'
+      x-request-id:
+      - 960170d1-6b3b-46ed-8f76-e3f5430ba123
+      x-runtime:
+      - '0.081336'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload, max-age=31536000; includeSubDomains;
+        preload
+      x-ua-compatible:
+      - chrome=1
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '[{"id":"018a1486-bd2f-4e59-9211-2314043fca05","job_id":"018a1486-a2d6-4d80-8204-b6cd3a1a18a5","url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/8/jobs/018a1486-a2d6-4d80-8204-b6cd3a1a18a5/artifacts/018a1486-bd2f-4e59-9211-2314043fca05","download_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/8/jobs/018a1486-a2d6-4d80-8204-b6cd3a1a18a5/artifacts/018a1486-bd2f-4e59-9211-2314043fca05/download","state":"finished","path":"README.md","dirname":".","filename":"README.md","mime_type":"text/markdown","file_size":1047,"glob_path":null,"original_path":null,"sha1sum":"60475b7055540d94dd42ef02bea675ae379cab21"}]
+
+        '
+  recorded_at: Sun, 20 Aug 2023 20:01:13 GMT
+recorded_with: VCR 6.2.0

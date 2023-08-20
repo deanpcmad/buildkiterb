@@ -1,26 +1,32 @@
 module Buildkite
-  class ArtifactsResource < Resource
+  class Artifact < Object
 
-    def list(org:, pipeline:, build:, job: nil)
-      if job
-        response = get_request("organizations/#{org}/pipelines/#{pipeline}/builds/#{build}/jobs/#{job}/artifacts")
-      else
-        response = get_request("organizations/#{org}/pipelines/#{pipeline}/builds/#{build}/artifacts")
+    class << self
+
+      def list(org: Buildkite.config.org, pipeline: Buildkite.config.pipeline, build:, job: nil)
+        if job
+          response = Client.get_request("organizations/#{org}/pipelines/#{pipeline}/builds/#{build}/jobs/#{job}/artifacts")
+        else
+          response = Client.get_request("organizations/#{org}/pipelines/#{pipeline}/builds/#{build}/artifacts")
+        end
+
+        Collection.from_response(response, type: Artifact)
       end
 
-      Collection.from_response(response, type: Artifact)
-    end
+      def retrieve(org: Buildkite.config.org, pipeline: Buildkite.config.pipeline, build:, job:, id:)
+        response = Client.get_request("organizations/#{org}/pipelines/#{pipeline}/builds/#{build}/jobs/#{job}/artifacts/#{id}")
+        Artifact.new response.body
+      end
 
-    def get(org:, pipeline:, build:, job:, id:)
-      Artifact.new get_request("organizations/#{org}/pipelines/#{pipeline}/builds/#{build}/jobs/#{job}/artifacts/#{id}").body
-    end
+      def download(org: Buildkite.config.org, pipeline: Buildkite.config.pipeline, build:, job:, id:)
+        response = Client.get_request("organizations/#{org}/pipelines/#{pipeline}/builds/#{build}/jobs/#{job}/artifacts/#{id}/download")
+        ArtifactDownload.new response.body
+      end
 
-    def download(org:, pipeline:, build:, job:, id:)
-      ArtifactDownload.new get_request("organizations/#{org}/pipelines/#{pipeline}/builds/#{build}/jobs/#{job}/artifacts/#{id}/download").body
-    end
+      def delete(org: Buildkite.config.org, pipeline: Buildkite.config.pipeline, build:, job:, id:)
+        Client.delete_request("organizations/#{org}/pipelines/#{pipeline}/builds/#{build}/jobs/#{job}/artifacts/#{id}")
+      end
 
-    def delete(org:, pipeline:, build:, job:, id:)
-      delete_request("organizations/#{org}/pipelines/#{pipeline}/builds/#{build}/jobs/#{job}/artifacts/#{id}")
     end
 
   end
