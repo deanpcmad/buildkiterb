@@ -1,12 +1,17 @@
 module Buildkite
-  class AccessTokenResource < Resource
-    
-    def get
-      AccessToken.new get_request("access-token").body
-    end
+  class AccessToken < Object
 
-    def revoke
-      delete_request("access-token")
+    class << self
+
+      def retrieve
+        response = Client.get_request("access-token")
+        AccessToken.new response.body
+      end
+
+      def revoke
+        Client.delete_request("access-token")
+      end
+
     end
 
   end

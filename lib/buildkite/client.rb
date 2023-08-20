@@ -40,7 +40,7 @@ module Buildkite
         when 400
           raise Error, "Error 400: Your request was malformed. '#{response.body["message"]}'"
         when 401
-          raise Error, "Error 401: You did not supply valid authentication credentials. '#{response.body["error"]}'"
+          raise Error, "Error 401: You did not supply valid authentication credentials. '#{response.body["message"]}'"
         when 403
           raise Error, "Error 403: You are not allowed to perform that action. '#{response.body["message"]}'"
         when 404

@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.buildkite.com/v2/access-token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - buildkiterb/v0.2.0 (github.com/deanpcmad/buildkiterb)
+      Authorization:
+      - Bearer <AUTHORIZATION>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 20 Aug 2023 18:56:32 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - nginx
+      x-frame-options:
+      - SAMEORIGIN, SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff, nosniff
+      x-download-options:
+      - noopen
+      x-permitted-cross-domain-policies:
+      - none
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - Link, Rate-Limit-Remaining, Rate-Limit-Limit, Rate-Limit-Reset, RateLimit-Remaining,
+        RateLimit-Limit, RateLimit-Reset, X-OAuth-Scopes
+      rate-limit-remaining:
+      - '98'
+      rate-limit-limit:
+      - '100'
+      rate-limit-reset:
+      - '28'
+      ratelimit-remaining:
+      - '98'
+      ratelimit-limit:
+      - '100'
+      ratelimit-reset:
+      - '28'
+      vary:
+      - Accept
+      x-oauth-scopes:
+      - read_agents,write_agents,read_clusters,write_clusters,read_teams,read_artifacts,write_artifacts,read_builds,write_builds,read_job_env,read_build_logs,write_build_logs,read_organizations,read_pipelines,write_pipelines,read_user,read_suites,write_suites
+      etag:
+      - W/"f13f3d9c081db1efdf527fad1ba7914c"
+      cache-control:
+      - max-age=0, private, must-revalidate
+      content-security-policy-report-only:
+      - 'object-src ''none''; script-src ''unsafe-inline'' ''strict-dynamic'' ''report-sample''
+        https: http: ''nonce-aoTmOcMZAnGiXF7zsU02Lw==''; report-uri /_csp-violation-reports'
+      x-request-id:
+      - df6b15c3-441d-41f2-bfac-ecec50f26c5d
+      x-runtime:
+      - '0.019769'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload, max-age=31536000; includeSubDomains;
+        preload
+      x-ua-compatible:
+      - chrome=1
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"uuid":"018a144c-6de8-43e6-a20e-d8d59d9db274","scopes":["read_agents","write_agents","read_clusters","write_clusters","read_teams","read_artifacts","write_artifacts","read_builds","write_builds","read_job_env","read_build_logs","write_build_logs","read_organizations","read_pipelines","write_pipelines","read_user","read_suites","write_suites"]}
+
+        '
+  recorded_at: Sun, 20 Aug 2023 18:56:32 GMT
+recorded_with: VCR 6.2.0
