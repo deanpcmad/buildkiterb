@@ -1,0 +1,107 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/7/jobs/018a147f-3803-4ade-8282-34aeaf0117e7/log
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - buildkiterb/v0.2.0 (github.com/deanpcmad/buildkiterb)
+      Authorization:
+      - Bearer <AUTHORIZATION>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 20 Aug 2023 19:52:34 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - nginx
+      x-frame-options:
+      - SAMEORIGIN, SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff, nosniff
+      x-download-options:
+      - noopen
+      x-permitted-cross-domain-policies:
+      - none
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - Link, Rate-Limit-Remaining, Rate-Limit-Limit, Rate-Limit-Reset, RateLimit-Remaining,
+        RateLimit-Limit, RateLimit-Reset, X-OAuth-Scopes
+      rate-limit-remaining:
+      - '99'
+      rate-limit-limit:
+      - '100'
+      rate-limit-reset:
+      - '26'
+      ratelimit-remaining:
+      - '99'
+      ratelimit-limit:
+      - '100'
+      ratelimit-reset:
+      - '26'
+      x-accepted-oauth-scopes:
+      - read_build_logs
+      vary:
+      - Accept
+      x-oauth-scopes:
+      - read_agents,write_agents,read_clusters,write_clusters,read_teams,read_artifacts,write_artifacts,read_builds,write_builds,read_job_env,read_build_logs,write_build_logs,read_organizations,read_pipelines,write_pipelines,read_user,read_suites,write_suites
+      etag:
+      - W/"bec7cb501dad8a9801a8618352abc102"
+      cache-control:
+      - max-age=0, private, must-revalidate
+      content-security-policy-report-only:
+      - 'object-src ''none''; script-src ''unsafe-inline'' ''strict-dynamic'' ''report-sample''
+        https: http: ''nonce-BJnCn5C2f82gFfvSFWGstQ==''; report-uri /_csp-violation-reports'
+      x-request-id:
+      - d3789d19-f1ba-4c41-9d20-17bb85584d69
+      x-runtime:
+      - '0.149171'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload, max-age=31536000; includeSubDomains;
+        preload
+      x-ua-compatible:
+      - chrome=1
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/7/jobs/018a147f-3803-4ade-8282-34aeaf0117e7/log","content":"\u001B_bk;t=1692561001439\u0007~~~
+        Preparing working directory\r\n\u001B_bk;t=1692561001439\u0007\u001B[90m$\u001B[0m
+        cd /buildkite/builds/cfb62e5d9cea-1/dean-test/starter-buildkite-pipeline\r\n\u001B_bk;t=1692561001440\u0007\u001B[90m$\u001B[0m
+        git clean -ffxdq\r\n\u001B_bk;t=1692561001441\u0007\u001B[90m$\u001B[0m git
+        fetch -v --prune -- origin 1e30ba627fe5e654b56832f9f172056f33547b77\r\n\u001B_bk;t=1692561001692\u0007POST
+        git-upload-pack (102 bytes)\r\r\n\u001B_bk;t=1692561001836\u0007From https://github.com/deanpcmad/starter\r\r\n\u001B_bk;t=1692561001836\u0007
+        * branch            1e30ba627fe5e654b56832f9f172056f33547b77 -> FETCH_HEAD\r\r\n\u001B_bk;t=1692561001842\u0007\u001B[90m$\u001B[0m
+        git checkout -f 1e30ba627fe5e654b56832f9f172056f33547b77\r\n\u001B_bk;t=1692561001843\u0007HEAD
+        is now at 1e30ba6 Update pipeline.yml\r\r\n\u001B_bk;t=1692561001843\u0007\u001B[90m#
+        Cleaning again to catch any post-checkout changes\u001B[0m\r\n\u001B_bk;t=1692561001843\u0007\u001B[90m$\u001B[0m
+        git clean -ffxdq\r\n\u001B_bk;t=1692561001844\u0007\u001B[90m# Checking to
+        see if Git data needs to be sent to Buildkite\u001B[0m\r\n\u001B_bk;t=1692561001844\u0007\u001B[90m$\u001B[0m
+        buildkite-agent meta-data exists buildkite:git:commit\r\n\u001B_bk;t=1692561002043\u0007~~~
+        Running commands\r\n\u001B_bk;t=1692561002044\u0007\u001B[90m$\u001B[0m trap
+        ''kill -- $$'' INT TERM QUIT; echo \"Launch the rocket\"\r\n\u001B_bk;t=1692561002044\u0007cat
+        .buildkite/annotation.md | buildkite-agent annotate --style \"success\"\r\n\u001B_bk;t=1692561002044\u0007\r\n\u001B_bk;t=1692561002045\u0007Launch
+        the rocket\r\r\n\u001B_bk;t=1692561002053\u0007\u001B[38;5;48m2023-08-20 19:50:02
+        INFO  \u001B[0m \u001B[0mReading annotation body from STDIN\u001B[0m\r\r\n","size":1403,"header_times":[]}
+
+        '
+  recorded_at: Sun, 20 Aug 2023 19:52:34 GMT
+recorded_with: VCR 6.2.0

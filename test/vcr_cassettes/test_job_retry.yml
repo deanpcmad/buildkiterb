@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/2/jobs/018a1478-a14e-481c-b71e-588fd81027d2/retry
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - buildkiterb/v0.2.0 (github.com/deanpcmad/buildkiterb)
+      Authorization:
+      - Bearer <AUTHORIZATION>
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 20 Aug 2023 19:48:12 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - nginx
+      x-frame-options:
+      - SAMEORIGIN, SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff, nosniff
+      x-download-options:
+      - noopen
+      x-permitted-cross-domain-policies:
+      - none
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - Link, Rate-Limit-Remaining, Rate-Limit-Limit, Rate-Limit-Reset, RateLimit-Remaining,
+        RateLimit-Limit, RateLimit-Reset, X-OAuth-Scopes
+      rate-limit-remaining:
+      - '99'
+      rate-limit-limit:
+      - '100'
+      rate-limit-reset:
+      - '48'
+      ratelimit-remaining:
+      - '99'
+      ratelimit-limit:
+      - '100'
+      ratelimit-reset:
+      - '48'
+      x-accepted-oauth-scopes:
+      - write_builds
+      vary:
+      - Accept
+      x-oauth-scopes:
+      - read_agents,write_agents,read_clusters,write_clusters,read_teams,read_artifacts,write_artifacts,read_builds,write_builds,read_job_env,read_build_logs,write_build_logs,read_organizations,read_pipelines,write_pipelines,read_user,read_suites,write_suites
+      etag:
+      - W/"ba1c88924392ec16c918ed3066d0ffdd"
+      cache-control:
+      - max-age=0, private, must-revalidate
+      content-security-policy-report-only:
+      - 'object-src ''none''; script-src ''unsafe-inline'' ''strict-dynamic'' ''report-sample''
+        https: http: ''nonce-t45ZB8lqa02eUcIW+n/OOA==''; report-uri /_csp-violation-reports'
+      x-request-id:
+      - 4855bdd5-d5eb-45d1-9bde-1c89765d7e61
+      x-runtime:
+      - '0.242278'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload, max-age=31536000; includeSubDomains;
+        preload
+      x-ua-compatible:
+      - chrome=1
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"id":"018a147d-a1e0-4c28-8471-7f672bfdda1b","graphql_id":"Sm9iLS0tMDE4YTE0N2QtYTFlMC00YzI4LTg0NzEtN2Y2NzJiZmRkYTFi","type":"script","name":":pipeline:","step_key":null,"priority":{"number":0},"agent_query_rules":[],"state":"scheduled","build_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/2","web_url":"https://buildkite.com/dean-test/starter-buildkite-pipeline/builds/2#018a147d-a1e0-4c28-8471-7f672bfdda1b","log_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/2/jobs/018a147d-a1e0-4c28-8471-7f672bfdda1b/log","raw_log_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/2/jobs/018a147d-a1e0-4c28-8471-7f672bfdda1b/log.txt","artifacts_url":"https://api.buildkite.com/v2/organizations/dean-test/pipelines/starter-buildkite-pipeline/builds/2/jobs/018a147d-a1e0-4c28-8471-7f672bfdda1b/artifacts","command":"buildkite-agent
+        pipeline upload","soft_failed":false,"exit_status":null,"artifact_paths":"","created_at":"2023-08-20T19:48:12.374Z","scheduled_at":"2023-08-20T19:42:44.549Z","runnable_at":"2023-08-20T19:48:12.446Z","started_at":null,"finished_at":null,"expired_at":null,"retried":false,"retried_in_job_id":null,"retries_count":1,"retry_source":{"job_id":"018a1478-a14e-481c-b71e-588fd81027d2","retry_type":"manual"},"retry_type":null,"parallel_group_index":null,"parallel_group_total":null,"matrix":null,"agent":null}
+
+        '
+  recorded_at: Sun, 20 Aug 2023 19:48:12 GMT
+recorded_with: VCR 6.2.0

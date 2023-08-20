@@ -1,24 +1,32 @@
 module Buildkite
-  class JobsResource < Resource
+  class Job < Object
 
-    def retry(org:, pipeline:, number:, job:)
-      Job.new put_request("organizations/#{org}/pipelines/#{pipeline}/builds/#{number}/jobs/#{job}/retry", body: {}).body
-    end
+    class << self
 
-    def unblock(org:, pipeline:, number:, job:, **args)
-      Job.new put_request("organizations/#{org}/pipelines/#{pipeline}/builds/#{number}/jobs/#{job}/unblock", body: args).body
-    end
+      def retry(org: Buildkite.config.org, pipeline: Buildkite.config.pipeline, number:, job:)
+        response = Client.put_request("organizations/#{org}/pipelines/#{pipeline}/builds/#{number}/jobs/#{job}/retry", body: {})
+        Job.new response.body
+      end
 
-    def log(org:, pipeline:, number:, job:)
-      JobLog.new get_request("organizations/#{org}/pipelines/#{pipeline}/builds/#{number}/jobs/#{job}/log").body
-    end
+      def unblock(org: Buildkite.config.org, pipeline: Buildkite.config.pipeline, number:, job:, **args)
+        response = Client.put_request("organizations/#{org}/pipelines/#{pipeline}/builds/#{number}/jobs/#{job}/unblock", body: args)
+        Job.new response.body
+      end
 
-    def delete_log(org:, pipeline:, number:, job:)
-      delete_request("organizations/#{org}/pipelines/#{pipeline}/builds/#{number}/jobs/#{job}/log")
-    end
+      def log(org: Buildkite.config.org, pipeline: Buildkite.config.pipeline, number:, job:)
+        response = Client.get_request("organizations/#{org}/pipelines/#{pipeline}/builds/#{number}/jobs/#{job}/log")
+        JobLog.new response.body
+      end
 
-    def env(org:, pipeline:, number:, job:)
-      JobEnv.new get_request("organizations/#{org}/pipelines/#{pipeline}/builds/#{number}/jobs/#{job}/env").body["env"]
+      def delete_log(org: Buildkite.config.org, pipeline: Buildkite.config.pipeline, number:, job:)
+        Client.delete_request("organizations/#{org}/pipelines/#{pipeline}/builds/#{number}/jobs/#{job}/log")
+      end
+
+      def env(org: Buildkite.config.org, pipeline: Buildkite.config.pipeline, number:, job:)
+        response = Client.get_request("organizations/#{org}/pipelines/#{pipeline}/builds/#{number}/jobs/#{job}/env")
+        JobEnv.new response.body["env"]
+      end
+
     end
 
   end
