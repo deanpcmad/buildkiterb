@@ -122,6 +122,70 @@ Buildkite::Agent.retrieve id: "abc123"
 Buildkite::Agent.stop id: "abc123"
 ```
 
+### Clusters
+
+```ruby
+# List all clusters for an org
+Buildkite::Cluster.list
+
+# Get a cluster
+Buildkite::Cluster.retrieve id: "abc123"
+
+# Create a cluster
+Buildkite::Cluster.create name: "Open Source"
+
+# Update a cluster
+Buildkite::Cluster.update id: "abc123", description: "A cluster for our Open Source projects"
+
+# Delete a cluster
+Buildkite::Cluster.delete id: "abc123"
+```
+
+### Cluster Queues
+
+```ruby
+# List all queues for a cluster
+Buildkite::ClusterQueue.list cluster: "abc123",
+
+# Get a cluster queue
+Buildkite::ClusterQueue.retrieve cluster: "abc123", id: "abc123"
+
+# Create a cluster queue
+Buildkite::ClusterQueue.create cluster: "abc123", key: "arm64"
+
+# Update a cluster queue
+Buildkite::ClusterQueue.update cluster: "abc123", id: "abc123", description: "For ARM64 builds"
+
+# Pause a cluster queue
+Buildkite::ClusterQueue.pause cluster: "abc123", id: "abc123", note: "For maintenance"
+
+# Unpause a cluster queue
+Buildkite::ClusterQueue.unpause cluster: "abc123", id: "abc123"
+
+# Delete a cluster queue
+Buildkite::ClusterQueue.delete cluster: "abc123", id: "abc123"
+```
+
+### Cluster Tokens
+
+```ruby
+# List all tokens for a cluster
+Buildkite::ClusterToken.list cluster: "abc123",
+
+# Get a cluster token
+Buildkite::ClusterToken.retrieve cluster: "abc123", id: "abc123"
+
+# Create a cluster token
+Buildkite::ClusterToken.create cluster: "abc123", description: "Windows Agents"
+
+# Update a cluster token
+Buildkite::ClusterToken.update cluster: "abc123", id: "abc123", allowed_ip_addresses: "1.1.1.1"
+
+# Delete a cluster token
+Buildkite::ClusterToken.delete cluster: "abc123", id: "abc123"
+```
+
+
 ### Jobs
 
 ```ruby
