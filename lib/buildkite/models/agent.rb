@@ -1,17 +1,22 @@
 module Buildkite
-  class AgentsResource < Resource
-    
-    def list(org:)
-      response = get_request("organizations/#{org}/agents")
-      Collection.from_response(response, type: Agent)
-    end
+  class Agent < Object
 
-    def get(org:, id:)
-      Agent.new get_request("organizations/#{org}/agents/#{id}").body
-    end
+    class << self
 
-    def stop(org:, id:, **args)
-      put_request("organizations/#{org}/agents/#{id}/stop", body: args)
+      def list(org: Buildkite.config.org)
+        response = Client.get_request("organizations/#{org}/agents")
+        Collection.from_response(response, type: Agent)
+      end
+
+      def retrieve(org: Buildkite.config.org, id:)
+        response = Client.get_request("organizations/#{org}/agents/#{id}")
+        Agent.new response.body
+      end
+
+      def stop(org: Buildkite.config.org, id:, **args)
+        Client.put_request("organizations/#{org}/agents/#{id}/stop", body: args)
+      end
+
     end
 
   end

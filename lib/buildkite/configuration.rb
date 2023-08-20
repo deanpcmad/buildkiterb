@@ -4,11 +4,8 @@ module Buildkite
   class Configuration
 
     attr_accessor :token
-    attr_accessor :organization
+    attr_accessor :org
     attr_accessor :pipeline
-
-    def initialize
-    end
 
   end
 end

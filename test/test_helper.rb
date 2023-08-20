@@ -12,10 +12,12 @@ VCR.configure do |config|
   config.hook_into :faraday
 
   config.filter_sensitive_data("<AUTHORIZATION>") { ENV["BUILDKITE_TOKEN"] }
+  config.filter_sensitive_data("<IP_ADDRESS>") { ENV["IP_ADDRESS"] }
 end
 
 Buildkite.configure do |config|
   config.token = ENV["BUILDKITE_TOKEN"]
+  config.org   = ENV["BUILDKITE_ORG"]
 end
 
 class Minitest::Test

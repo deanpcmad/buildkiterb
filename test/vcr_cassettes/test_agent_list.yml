@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.buildkite.com/v2/organizations/dean-test/agents
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - buildkiterb/v0.2.0 (github.com/deanpcmad/buildkiterb)
+      Authorization:
+      - Bearer <AUTHORIZATION>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 20 Aug 2023 19:04:32 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - nginx
+      x-frame-options:
+      - SAMEORIGIN, SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff, nosniff
+      x-download-options:
+      - noopen
+      x-permitted-cross-domain-policies:
+      - none
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - Link, Rate-Limit-Remaining, Rate-Limit-Limit, Rate-Limit-Reset, RateLimit-Remaining,
+        RateLimit-Limit, RateLimit-Reset, X-OAuth-Scopes
+      rate-limit-remaining:
+      - '99'
+      rate-limit-limit:
+      - '100'
+      rate-limit-reset:
+      - '28'
+      ratelimit-remaining:
+      - '99'
+      ratelimit-limit:
+      - '100'
+      ratelimit-reset:
+      - '28'
+      x-accepted-oauth-scopes:
+      - read_agents
+      vary:
+      - Accept
+      x-oauth-scopes:
+      - read_agents,write_agents,read_clusters,write_clusters,read_teams,read_artifacts,write_artifacts,read_builds,write_builds,read_job_env,read_build_logs,write_build_logs,read_organizations,read_pipelines,write_pipelines,read_user,read_suites,write_suites
+      etag:
+      - W/"95881cba4c80857206baa943bd534261"
+      cache-control:
+      - max-age=0, private, must-revalidate
+      content-security-policy-report-only:
+      - 'object-src ''none''; script-src ''unsafe-inline'' ''strict-dynamic'' ''report-sample''
+        https: http: ''nonce-ttSfIDgMOhnyMKplQBM1cw==''; report-uri /_csp-violation-reports'
+      x-request-id:
+      - 438c9e60-6956-484e-9f17-25ba69dc453f
+      x-runtime:
+      - '0.041817'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload, max-age=31536000; includeSubDomains;
+        preload
+      x-ua-compatible:
+      - chrome=1
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '[{"id":"018a1453-7390-4148-958d-72ac5568f9c1","url":"https://api.buildkite.com/v2/organizations/dean-test/agents/018a1453-7390-4148-958d-72ac5568f9c1","web_url":"https://buildkite.com/organizations/dean-test/agents/018a1453-7390-4148-958d-72ac5568f9c1","name":"38cc41b56f5f-1","connection_state":"connected","ip_address":"<IP_ADDRESS>","hostname":"38cc41b56f5f","user_agent":"buildkite-agent/3.52.0.6806
+        (linux; amd64)","version":"3.52.0","creator":null,"created_at":"2023-08-20T19:02:08.016Z","job":null,"last_job_finished_at":null,"priority":0,"meta_data":["queue=default"]}]
+
+        '
+  recorded_at: Sun, 20 Aug 2023 19:04:32 GMT
+recorded_with: VCR 6.2.0

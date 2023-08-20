@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api.buildkite.com/v2/organizations/dean-test/agents/018a1453-7390-4148-958d-72ac5568f9c1/stop
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - buildkiterb/v0.2.0 (github.com/deanpcmad/buildkiterb)
+      Authorization:
+      - Bearer <AUTHORIZATION>
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      date:
+      - Sun, 20 Aug 2023 19:07:03 GMT
+      connection:
+      - keep-alive
+      server:
+      - nginx
+      x-frame-options:
+      - SAMEORIGIN, SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff, nosniff
+      x-download-options:
+      - noopen
+      x-permitted-cross-domain-policies:
+      - none
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - Link, Rate-Limit-Remaining, Rate-Limit-Limit, Rate-Limit-Reset, RateLimit-Remaining,
+        RateLimit-Limit, RateLimit-Reset, X-OAuth-Scopes
+      rate-limit-remaining:
+      - '99'
+      rate-limit-limit:
+      - '100'
+      rate-limit-reset:
+      - '57'
+      ratelimit-remaining:
+      - '99'
+      ratelimit-limit:
+      - '100'
+      ratelimit-reset:
+      - '57'
+      x-accepted-oauth-scopes:
+      - write_agents
+      x-oauth-scopes:
+      - read_agents,write_agents,read_clusters,write_clusters,read_teams,read_artifacts,write_artifacts,read_builds,write_builds,read_job_env,read_build_logs,write_build_logs,read_organizations,read_pipelines,write_pipelines,read_user,read_suites,write_suites
+      cache-control:
+      - no-cache
+      content-security-policy-report-only:
+      - 'object-src ''none''; script-src ''unsafe-inline'' ''strict-dynamic'' ''report-sample''
+        https: http: ''nonce-/4Qcc1nA8Xt6Y88ggkbkqg==''; report-uri /_csp-violation-reports'
+      x-request-id:
+      - 567c90c0-0afd-49b0-afee-851182e318a9
+      x-runtime:
+      - '0.104734'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload, max-age=31536000; includeSubDomains;
+        preload
+      x-ua-compatible:
+      - chrome=1
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sun, 20 Aug 2023 19:07:03 GMT
+recorded_with: VCR 6.2.0
