@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.buildkite.com/v2/organizations/dean-test/clusters
+    body:
+      encoding: UTF-8
+      string: '{"name":"Private Apps"}'
+    headers:
+      User-Agent:
+      - buildkiterb/v0.2.0 (github.com/deanpcmad/buildkiterb)
+      Authorization:
+      - Bearer <AUTHORIZATION>
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      date:
+      - Sun, 20 Aug 2023 20:35:36 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - nginx
+      x-frame-options:
+      - SAMEORIGIN, SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff, nosniff
+      x-download-options:
+      - noopen
+      x-permitted-cross-domain-policies:
+      - none
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - Link, Rate-Limit-Remaining, Rate-Limit-Limit, Rate-Limit-Reset, RateLimit-Remaining,
+        RateLimit-Limit, RateLimit-Reset, X-OAuth-Scopes
+      rate-limit-remaining:
+      - '94'
+      rate-limit-limit:
+      - '100'
+      rate-limit-reset:
+      - '24'
+      ratelimit-remaining:
+      - '94'
+      ratelimit-limit:
+      - '100'
+      ratelimit-reset:
+      - '24'
+      x-accepted-oauth-scopes:
+      - write_clusters
+      vary:
+      - Accept
+      x-oauth-scopes:
+      - read_agents,write_agents,read_clusters,write_clusters,read_teams,read_artifacts,write_artifacts,read_builds,write_builds,read_job_env,read_build_logs,write_build_logs,read_organizations,read_pipelines,write_pipelines,read_user,read_suites,write_suites
+      etag:
+      - W/"cf46f75b4b98541c92faba5c696c7d28"
+      cache-control:
+      - max-age=0, private, must-revalidate
+      content-security-policy-report-only:
+      - 'object-src ''none''; script-src ''unsafe-inline'' ''strict-dynamic'' ''report-sample''
+        https: http: ''nonce-RHUN1gv0sbGqbc2e3MEU7g==''; report-uri /_csp-violation-reports'
+      x-request-id:
+      - 1df7a8ed-d515-4388-9cf3-2a823373559b
+      x-runtime:
+      - '0.112276'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload, max-age=31536000; includeSubDomains;
+        preload
+      x-ua-compatible:
+      - chrome=1
+    body:
+      encoding: UTF-8
+      string: '{"id":"efae9c9f-fe3a-4cb4-b470-ac3b8641d1c8","graphql_id":"Q2x1c3Rlci0tLWVmYWU5YzlmLWZlM2EtNGNiNC1iNDcwLWFjM2I4NjQxZDFjOA==","default_queue_id":null,"name":"Private
+        Apps","description":null,"emoji":null,"color":null,"url":"https://api.buildkite.com/v2/organizations/dean-test/clusters/efae9c9f-fe3a-4cb4-b470-ac3b8641d1c8","web_url":"https://buildkite.com/organizations/dean-test/clusters/efae9c9f-fe3a-4cb4-b470-ac3b8641d1c8","queues_url":"https://api.buildkite.com/v2/organizations/dean-test/clusters/efae9c9f-fe3a-4cb4-b470-ac3b8641d1c8/queues","default_queue_url":null,"created_at":"2023-08-20T20:35:36.543Z","created_by":{"id":"984e6bf7-2523-4bf1-930b-58981572d65c","graphql_id":"VXNlci0tLTk4NGU2YmY3LTI1MjMtNGJmMS05MzBiLTU4OTgxNTcyZDY1Yw==","name":"Dean","email":"dean@deanpcmad.com","avatar_url":"https://www.gravatar.com/avatar/dd4d495ca7501f88b68a3702c0587e41","created_at":"2014-09-22T10:13:21.477Z"}}
+
+        '
+  recorded_at: Sun, 20 Aug 2023 20:35:36 GMT
+recorded_with: VCR 6.2.0
