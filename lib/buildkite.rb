@@ -32,6 +32,7 @@ module Buildkite
   autoload :Agent, "buildkite/models/agent"
   autoload :Cluster, "buildkite/models/cluster"
   autoload :ClusterQueue, "buildkite/models/cluster_queue"
+  autoload :ClusterToken, "buildkite/models/cluster_token"
   autoload :Annotation, "buildkite/models/annotation"
   autoload :Artifact, "buildkite/models/artifact"
   autoload :ArtifactDownload, "buildkite/models/artifact_download"
