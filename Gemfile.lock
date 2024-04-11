@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    buildkiterb (1.0.0)
+    buildkiterb (1.0.1)
       faraday (~> 2.0)
 
 GEM
